@@ -84,11 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function buildRadar(id, size, animated){
     const el = document.getElementById(id); if(!el) return;
     const c = el.getContext('2d');
-    const dpr = window.devicePixelRatio || 1;
-    el.width = size * dpr; el.height = size * dpr;
-    el.style.width = size + 'px'; el.style.height = size + 'px';
-    c.scale(dpr, dpr);
-    const cx=size/2, cy=size/2, R=size*.33;
+    el.width = size; el.height = size;
+    const cx=size/2, cy=size/2, R=size*.38;
     const labels = ['Frontend','Backend','DSA','ML / AI','Sys. Design','Databases'];
     const vals   = [.82,.78,.72,.75,.60,.76];
     const colors = ['#c9f63e','#e96040','#80bcff','#a78bfa','rgba(201,246,62,.55)','rgba(233,96,64,.55)'];
@@ -148,10 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function sizeChart(){
       const W2 = sc.parentElement.clientWidth - 40;
       const H2 = 180;
-      const dpr2 = window.devicePixelRatio || 1;
-      sc.width = W2 * dpr2; sc.height = H2 * dpr2;
-      sc.style.width = W2 + 'px'; sc.style.height = H2 + 'px';
-      ctx2.scale(dpr2, dpr2);
+      sc.width = W2; sc.height = H2;
       return {W2, H2};
     }
     const data=[{l:'JS/React',v:82},{l:'Node/Express',v:78},{l:'Python/ML',v:75},{l:'MongoDB/SQL',v:72},{l:'DSA',v:68},{l:'Git/Ops',v:64}];
@@ -188,6 +182,6 @@ document.addEventListener('DOMContentLoaded', () => {
     cObs.observe(sc);
   }
 
-/* ─── SCROLL REVEALS — handled by AOS ── */
+  /* ─── SCROLL REVEALS — handled by AOS (initialised in index.html) ── */
 
 });
