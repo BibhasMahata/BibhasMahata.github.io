@@ -188,11 +188,6 @@ document.addEventListener('DOMContentLoaded', () => {
     cObs.observe(sc);
   }
 
-  /* ─── SCROLL REVEALS ─────────────────────────── */
-  const rvs = document.querySelectorAll('.rv,.rl');
-  const rObs = new IntersectionObserver(entries=>{
-    entries.forEach(e=>{ if(e.isIntersecting){e.target.classList.add('in');rObs.unobserve(e.target);} });
-  },{threshold:.1});
-  rvs.forEach(el=>rObs.observe(el));
+/* ─── SCROLL REVEALS — handled by AOS ── */
 
 });
