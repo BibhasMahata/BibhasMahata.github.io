@@ -84,7 +84,10 @@ document.addEventListener('DOMContentLoaded', () => {
   function buildRadar(id, size, animated){
     const el = document.getElementById(id); if(!el) return;
     const c = el.getContext('2d');
-    el.width = size; el.height = size;
+    const dpr = window.devicePixelRatio || 1;
+   el.width = size * dpr; el.height = size * dpr;
+   el.style.width = size + 'px'; el.style.height = size + 'px';
+   c.scale(dpr, dpr);
     const cx=size/2, cy=size/2, R=size*.38;
     const labels = ['Frontend','Backend','DSA','ML / AI','Sys. Design','Databases'];
     const vals   = [.82,.78,.72,.75,.60,.76];
