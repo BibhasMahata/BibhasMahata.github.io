@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Bibhas Mahata — Full Stack Developer</title>
+  <meta name="description" content="Portfolio of Bibhas Mahata — CS undergrad at KIIT, full-stack developer and ML researcher."/>
+  <meta property="og:title" content="Bibhas Mahata — Full Stack Developer"/>
+  <meta property="og:description" content="Building scalable web applications and deep learning systems."/>
+  <link rel="icon" href="favicon.ico" sizes="any"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+</head>
+<body>
+
+<div id="cur-dot"></div>
+<div id="cur-ring"></div>
+
+<!-- ░░ NAV ░░ -->
+<nav id="nav">
+  <a href="#hero" class="nav-logo">BM<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://github.com/BibhasMahata" target="_blank" class="nav-resume">GitHub ↗</a>
+</nav>
+
+<!-- ░░ HERO ░░ -->
+<section id="hero">
+  <canvas id="constellation-canvas"></canvas>
+
+  <div class="hero-left">
+    <div class="hero-tag">CS Undergrad @ KIIT · Bhubaneswar, India</div>
+    <h1 class="hero-name">
+      Bibhas
+      <span class="line2">Mahata</span>
+    </h1>
+    <p class="hero-role"><span id="typewriter"></span><span class="cblink"></span></p>
+    <p class="hero-desc">
+      Building scalable full-stack web apps and deep learning systems.
+      I care about clean architecture, fast backends, and interfaces that feel inevitable.
+      Currently exploring GoLang, Docker &amp; cloud-native tooling.
+    </p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn btn-acid">
+        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        See my work
+      </a>
+      <a href="https://github.com/BibhasMahata" target="_blank" class="btn btn-outline">
+        <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub
+      </a>
+      <a href="#contact" class="btn btn-outline">Get in touch</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <!-- stat cards -->
+    <div class="hero-stat-cards">
+      <div class="hsc">
+        <div class="hsc-val">6.47</div>
+        <div class="hsc-lbl">CGPA</div>
+        <div class="hsc-sub">No backlogs</div>
+      </div>
+      <div class="hsc">
+        <div class="hsc-val">2+</div>
+        <div class="hsc-lbl">Projects</div>
+        <div class="hsc-sub">Shipped & ongoing</div>
+      </div>
+      <div class="hsc">
+        <div class="hsc-val">1</div>
+        <div class="hsc-lbl">Paper</div>
+        <div class="hsc-sub">Co-authored</div>
+      </div>
+      <div class="hsc">
+        <div class="hsc-val">5+</div>
+        <div class="hsc-lbl">Languages</div>
+        <div class="hsc-sub">JS · Py · Java · C · C#</div>
+      </div>
+    </div>
+    <!-- terminal -->
+    <div class="terminal-panel">
+      <div class="term-topbar">
+        <div class="term-dots"><span></span><span></span><span></span></div>
+        <div class="term-title">bibhas@portfolio ~ $</div>
+      </div>
+      <div class="term-body" id="term-body"></div>
+    </div>
+  </div>
+
+  <div class="scroll-hint"><div class="scroll-mouse"></div><span>Scroll</span></div>
+</section>
+
+<hr class="div"/>
+
+<!-- ░░ ABOUT ░░ -->
+<section id="about" class="section">
+  <div class="sec-tag" data-aos="fade-right" data-aos-duration="600">01 — About me</div>
+  <div class="about-grid">
+
+    <div>
+      <h2 class="sec-h" data-aos="fade-up" data-aos-duration="700">I build things<br><em>that scale</em></h2>
+      <p class="about-p" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+        I'm a <strong>Computer Science undergrad at KIIT, Bhubaneswar</strong> (graduating 2027) with hands-on
+        experience in full-stack web development and deep learning. I care obsessively about
+        code that is modular, readable, and built to survive production.
+      </p>
+      <p class="about-p" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
+        My work ranges from designing <strong>RESTful APIs with role-based access control</strong>
+        and <em>MongoDB-backed full-stack media platforms</em>, to training GANs for image
+        super-resolution and co-authoring an academic paper on the results.
+      </p>
+      <p class="about-p" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
+        Currently learning <strong>GoLang, Docker, Redis &amp; cloud-native tooling</strong>.
+        Looking to join a team where I can ship real things and grow fast.
+      </p>
+
+      <div class="about-facts" data-aos="fade-up" data-aos-delay="350" data-aos-duration="700">
+        <div class="fact">
+          <div class="fact-k">CGPA</div>
+          <div class="fact-v">6.47</div>
+          <div class="fact-s">No backlogs · KIIT 2027</div>
+        </div>
+        <div class="fact">
+          <div class="fact-k">Projects</div>
+          <div class="fact-v">2+</div>
+          <div class="fact-s">Shipped &amp; ongoing</div>
+        </div>
+        <div class="fact">
+          <div class="fact-k">Academic paper</div>
+          <div class="fact-v">1</div>
+          <div class="fact-s">Co-authored · GAN super-res</div>
+        </div>
+        <div class="fact">
+          <div class="fact-k">Frameworks</div>
+          <div class="fact-v">6+</div>
+          <div class="fact-s">React · Node · Express · PyTorch…</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-visual">
+      <!-- currently learning banner -->
+      <div class="currently" data-aos="fade-left" data-aos-delay="100" data-aos-duration="700">
+        <div class="curr-icon"></div>
+        <div class="curr-text">
+          <strong>Currently learning</strong>
+          GoLang · Docker · Redis · Kubernetes · AWS / Azure — actively building toward cloud-native full-stack development.
+        </div>
+      </div>
+      <!-- radar -->
+      <div class="av-card" data-aos="fade-left" data-aos-delay="200" data-aos-duration="700">
+        <div class="av-title">Skill radar</div>
+        <canvas id="radar-about" width="320" height="320"></canvas>
+        <div class="radar-leg">
+          <div class="rleg"><div class="rleg-dot" style="background:#c9f63e"></div>Frontend</div>
+          <div class="rleg"><div class="rleg-dot" style="background:#e96040"></div>Backend</div>
+          <div class="rleg"><div class="rleg-dot" style="background:#80bcff"></div>DSA</div>
+          <div class="rleg"><div class="rleg-dot" style="background:#a78bfa"></div>ML / AI</div>
+          <div class="rleg"><div class="rleg-dot" style="background:rgba(201,246,62,.55)"></div>Databases</div>
+          <div class="rleg"><div class="rleg-dot" style="background:rgba(233,96,64,.55)"></div>Sys. Design</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="div"/>
+
+<!-- ░░ SKILLS ░░ -->
+<section id="skills" class="section">
+  <div class="sec-tag" data-aos="fade-right" data-aos-duration="600">02 — Technical skills</div>
+  <h2 class="sec-h" data-aos="fade-up" data-aos-duration="700">What I <em>work with</em></h2>
+  <div class="skills-layout">
+
+    <!-- animated bars + bar chart -->
+    <div>
+      <div class="skill-item" data-aos="fade-up" data-aos-duration="600">
+        <div class="skill-top"><span class="skill-nm">JavaScript / React.js</span><span class="skill-pct">82%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-pct="82"></div></div>
+      </div>
+      <div class="skill-item" data-aos="fade-up" data-aos-delay="80" data-aos-duration="600">
+        <div class="skill-top"><span class="skill-nm">Node.js / Express.js</span><span class="skill-pct">78%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-pct="78"></div></div>
+      </div>
+      <div class="skill-item" data-aos="fade-up" data-aos-delay="120" data-aos-duration="600">
+        <div class="skill-top"><span class="skill-nm">Python / PyTorch / ML</span><span class="skill-pct">75%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-pct="75"></div></div>
+      </div>
+      <div class="skill-item" data-aos="fade-up" data-aos-delay="160" data-aos-duration="600">
+        <div class="skill-top"><span class="skill-nm">MongoDB / MySQL</span><span class="skill-pct">72%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-pct="72"></div></div>
+      </div>
+      <div class="skill-item" data-aos="fade-up" data-aos-delay="200" data-aos-duration="600">
+        <div class="skill-top"><span class="skill-nm">REST API Design / RBAC</span><span class="skill-pct">76%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-pct="76"></div></div>
+      </div>
+      <div class="skill-item" data-aos="fade-up" data-aos-delay="240" data-aos-duration="600">
+        <div class="skill-top"><span class="skill-nm">Data Structures &amp; Algorithms</span><span class="skill-pct">68%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-pct="68"></div></div>
+      </div>
+      <div class="skill-item" data-aos="fade-up" data-aos-delay="280" data-aos-duration="600">
+        <div class="skill-top"><span class="skill-nm">Machine Learning / GANs</span><span class="skill-pct">70%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-pct="70"></div></div>
+      </div>
+
+      <div class="chart-wrap" data-aos="fade-up" data-aos-delay="320" data-aos-duration="700">
+        <div class="chart-title">Proficiency overview</div>
+        <canvas id="skill-chart" height="180"></canvas>
+      </div>
+    </div>
+
+    <!-- tag groups -->
+    <div class="tags-col">
+      <div data-aos="fade-left" data-aos-duration="600">
+        <div class="tg-head">Languages</div>
+        <div class="tags">
+          <span class="tag">JavaScript (ES6+)</span>
+          <span class="tag">Python</span>
+          <span class="tag">Java</span>
+          <span class="tag">C</span>
+          <span class="tag">C#</span>
+          <span class="tag tag-l">GoLang ↗</span>
+        </div>
+      </div>
+      <div data-aos="fade-left" data-aos-delay="80" data-aos-duration="600">
+        <div class="tg-head">Frontend</div>
+        <div class="tags">
+          <span class="tag">React.js</span>
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag tag-l">Next.js ↗</span>
+        </div>
+      </div>
+      <div data-aos="fade-left" data-aos-delay="120" data-aos-duration="600">
+        <div class="tg-head">Backend</div>
+        <div class="tags">
+          <span class="tag">Node.js</span>
+          <span class="tag">Express.js</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">JWT Auth</span>
+          <span class="tag">Middleware</span>
+          <span class="tag">RBAC</span>
+          <span class="tag">MVC</span>
+        </div>
+      </div>
+      <div data-aos="fade-left" data-aos-delay="160" data-aos-duration="600">
+        <div class="tg-head">Databases</div>
+        <div class="tags">
+          <span class="tag">MongoDB</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Aggregation Pipelines</span>
+          <span class="tag">Schema Design</span>
+        </div>
+      </div>
+      <div data-aos="fade-left" data-aos-delay="200" data-aos-duration="600">
+        <div class="tg-head">ML / Deep Learning</div>
+        <div class="tags">
+          <span class="tag">PyTorch</span>
+          <span class="tag">NumPy</span>
+          <span class="tag">SRGAN</span>
+          <span class="tag">SRCNN / CNNs</span>
+          <span class="tag">OpenCV</span>
+          <span class="tag">Generative AI</span>
+        </div>
+      </div>
+      <div data-aos="fade-left" data-aos-delay="240" data-aos-duration="600">
+        <div class="tg-head">Tools · Exploring</div>
+        <div class="tags">
+          <span class="tag">Git</span>
+          <span class="tag">Postman</span>
+          <span class="tag">Agile / Scrum</span>
+          <span class="tag">Unit Testing</span>
+          <span class="tag tag-l">Docker ↗</span>
+          <span class="tag tag-l">Redis ↗</span>
+          <span class="tag tag-l">Kubernetes ↗</span>
+          <span class="tag tag-l">AWS / Azure ↗</span>
+          <span class="tag tag-l">CI/CD ↗</span>
+        </div>
+      </div>
+      <div data-aos="fade-left" data-aos-delay="280" data-aos-duration="600">
+        <div class="tg-head">CS Fundamentals</div>
+        <div class="tags">
+          <span class="tag">Operating Systems</span>
+          <span class="tag">Computer Networks</span>
+          <span class="tag">DBMS</span>
+          <span class="tag">OOP</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="div"/>
+
+<!-- ░░ PROJECTS ░░ -->
+<section id="projects" class="section">
+  <div class="sec-tag" data-aos="fade-right" data-aos-duration="600">03 — Projects</div>
+  <h2 class="sec-h" data-aos="fade-up" data-aos-duration="700">Things I've <em>built</em></h2>
+
+  <div class="proj-grid">
+
+    <!-- IROB — wide featured -->
+    <div class="proj-card wide" data-aos="fade-up" data-aos-duration="800">
+      <div class="proj-inner">
+        <div>
+          <div class="proj-num">01</div>
+          <div class="proj-name">IROB<span>.</span></div>
+          <p class="proj-sub">Intelligent Retrieval &amp; Organization of Boundless Media</p>
+          <div class="proj-stack">
+            <span class="ptag">React</span><span class="ptag">Node.js</span>
+            <span class="ptag">Express</span><span class="ptag">MongoDB</span>
+            <span class="ptag">REST API</span><span class="ptag">RBAC</span>
+            <span class="ptag">JWT</span><span class="ptag">MVC</span>
+          </div>
+          <ul class="proj-bullets">
+            <li>Full-stack media platform — React frontend + Node/Express backend + MongoDB — one destination replacing IMDb, Fandom, Reddit and Discord.</li>
+            <li>Designed a multi-route <strong>RESTful API with role-based access control</strong> (RBAC), enforcing distinct permissions at the middleware layer for users vs. publishers.</li>
+            <li>Built a <strong>community keyword tagging system</strong> that trains the platform's categorisation algorithm progressively with user-submitted data.</li>
+            <li><strong>Modular backend</strong>: controllers, services, and routes cleanly separated — extensible, testable, and ready to scale.</li>
+            <li>Next phase: wikis, discussion boards, watch-party servers, <strong>AI-assisted moderation</strong> — each as an isolated pluggable module.</li>
+          </ul>
+          <div class="proj-links">
+            <a href="https://github.com/BibhasMahata" target="_blank" class="proj-link">
+              GitHub ↗
+            </a>
+            <span class="proj-status">· Ongoing · Active development</span>
+          </div>
+        </div>
+
+        <div class="proj-metrics">
+          <div class="pm"><span class="pm-k">API endpoints</span><span class="pm-v">20+</span></div>
+          <div class="pm"><span class="pm-k">Access roles</span><span class="pm-v">3</span></div>
+          <div class="pm"><span class="pm-k">DB collections</span><span class="pm-v">8+</span></div>
+          <div class="pm"><span class="pm-k">Stack layers</span><span class="pm-v">4</span></div>
+          <div class="proj-arch">
+            <div class="arch-title">Architecture</div>
+            <div class="arch-tree">
+              Client <span style="color:var(--wire3)">(React)</span><br>
+              <span style="color:var(--wire3)"> └─</span> REST API <span style="color:var(--wire3)">(Express)</span><br>
+              <span style="color:var(--wire3)">     └─</span> Services / Controllers<br>
+              <span style="color:var(--wire3)">         └─</span> <span class="hl">MongoDB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- IRIS -->
+    <div class="proj-card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+      <div class="proj-num">02</div>
+      <div class="proj-name">Iris<span>.</span></div>
+      <p class="proj-sub">Single Image Super Resolution via Deep Learning</p>
+      <div class="proj-stack">
+        <span class="ptag">Python</span><span class="ptag">PyTorch</span>
+        <span class="ptag">SRGAN</span><span class="ptag">SRCNN</span>
+        <span class="ptag">OpenCV</span><span class="ptag">NumPy</span>
+        <span class="ptag">VGG19</span>
+      </div>
+      <ul class="proj-bullets">
+        <li>Implemented <strong>SRCNN</strong> (CNN baseline) and <strong>SRGAN</strong> (GAN + VGG19 perceptual loss) — rigorous architectural comparison on the same dataset.</li>
+        <li>SRGAN achieved <strong>+4.39% PSNR improvement</strong> (21.38 dB vs 20.48 dB). Documented 15.03% lower SSIM trade-off in complex scenes.</li>
+        <li>Codebase structured cleanly across <code style="font-family:var(--fm);font-size:10px;color:var(--acid)">src/</code>, <code style="font-family:var(--fm);font-size:10px;color:var(--acid)">scripts/</code>, <code style="font-family:var(--fm);font-size:10px;color:var(--acid)">notebook/</code> following production software engineering conventions.</li>
+        <li><strong>Co-authored academic paper</strong> covering architecture, training methodology, and quantitative evaluation.</li>
+      </ul>
+      <div class="proj-links">
+        <a href="https://github.com/BibhasMahata/Single-Image-Super-Resolution" target="_blank" class="proj-link">
+          GitHub ↗
+        </a>
+        <span class="proj-status">· 2024 · Paper co-authored</span>
+      </div>
+    </div>
+
+    <!-- IRIS stats card -->
+    <div class="proj-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+      <div class="iris-stats">
+        <div>
+          <div style="font-family:var(--fm);font-size:9px;color:var(--muted);letter-spacing:.13em;text-transform:uppercase;margin-bottom:1.5rem">Iris — Key Results</div>
+          <div class="istat">
+            <div class="istat-val" style="color:var(--acid)">+4.39<span style="font-size:1.2rem">%</span></div>
+            <div class="istat-desc">PSNR improvement — SRGAN vs SRCNN baseline</div>
+          </div>
+          <div class="istat">
+            <div class="istat-val" style="color:var(--ice)">21.38<span style="font-size:1.2rem"> dB</span></div>
+            <div class="istat-desc">Peak PSNR score achieved by SRGAN</div>
+          </div>
+          <div class="istat">
+            <div class="istat-val" style="color:var(--rust)">−15<span style="font-size:1.2rem">%</span></div>
+            <div class="istat-desc">SSIM trade-off in structurally complex scenes</div>
+          </div>
+        </div>
+        <div style="padding-top:1rem;border-top:1px solid var(--wire)">
+          <div style="font-family:var(--fm);font-size:9.5px;color:var(--muted);letter-spacing:.06em">1 academic paper co-authored</div>
+          <a href="https://github.com/BibhasMahata/Single-Image-Super-Resolution" target="_blank" class="proj-link" style="margin-top:.6rem;display:inline-flex">View repo ↗</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="div"/>
+
+<!-- ░░ EDUCATION ░░ -->
+<section id="education" class="section">
+  <div class="sec-tag" data-aos="fade-right" data-aos-duration="600">04 — Education</div>
+  <h2 class="sec-h" data-aos="fade-up" data-aos-duration="700">Where I <em>studied</em></h2>
+  <div class="edu-wrap">
+
+    <div class="edu-row" data-aos="fade-up" data-aos-duration="700">
+      <div class="edu-yr">2023<br>—<br>2027</div>
+      <div class="edu-body">
+        <div class="edu-inst">KIIT University</div>
+        <div class="edu-deg">B.Tech in Computer Science &amp; Engineering · Bhubaneswar, Odisha</div>
+        <div class="edu-badge">✓ CGPA 6.47 · No Backlogs</div>
+      </div>
+    </div>
+
+    <div class="edu-row" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+      <div class="edu-yr">2023</div>
+      <div class="edu-body">
+        <div class="edu-inst">Nootan Global School</div>
+        <div class="edu-deg">Class XII · CBSE</div>
+        <div class="edu-badge blue">67%</div>
+      </div>
+    </div>
+
+    <div class="edu-row" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
+      <div class="edu-yr">2021</div>
+      <div class="edu-body">
+        <div class="edu-inst">Nootan Global School</div>
+        <div class="edu-deg">Class X · CBSE</div>
+        <div class="edu-badge blue">90%</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="div"/>
+
+<!-- ░░ CONTACT ░░ -->
+<section id="contact" class="section">
+  <div class="sec-tag reveal-contact" style="justify-content:center">05 — Contact</div>
+  <h2 class="contact-h reveal-contact" style="transition-delay:.08s">Let's<br><span>talk.</span></h2>
+  <p class="contact-sub reveal-contact" style="transition-delay:.18s">Open to internships, full-stack roles, and interesting problems. I respond fast.</p>
+  <p class="contact-email reveal-contact" style="transition-delay:.24s"><a href="mailto:bibhasmahata856@gmail.com">bibhasmahata856@gmail.com</a></p>
+  <div class="contact-row reveal-contact" style="transition-delay:.34s">
+    <a href="mailto:bibhasmahata856@gmail.com" class="contact-btn">
+      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      Email
+    </a>
+    <a href="https://github.com/BibhasMahata" target="_blank" class="contact-btn">
+      <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      GitHub
+    </a>
+    <a href="tel:+917069025473" class="contact-btn">
+      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18a2 2 0 012-2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 6.91a16 16 0 006.29 6.29l1.28-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14v2.92z"/></svg>
+      Phone
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="ft">© 2024 Bibhas Mahata · Bhubaneswar</div>
+  <div class="ft">Built with <span>HTML · CSS · JS</span> · Hosted on <span>GitHub Pages</span></div>
+</footer>
+
+<script src="main.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/motion@10.16.4/dist/motion.umd.js"></script>
+<script>
+  /* ── AOS INIT ── */
+  AOS.init({
+    once: true,
+    easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
+    offset: 0,
+    anchorPlacement: 'top-bottom',
+    duration: 700,
+  });
+
+  /* Refresh after full page load so late-rendering elements register correctly */
+  window.addEventListener('load', () => {
+    AOS.refresh();
+    /* Safety net: any [data-aos] element already in the viewport gets animated immediately */
+    document.querySelectorAll('[data-aos]').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        el.classList.add('aos-animate');
+      }
+    });
+  });
+
+  /* ── MOTION ONE — Hero entrance (spring physics) ── */
+ const { animate, stagger, spring } = window.Motion || {};
+  if (!animate) {
+    document.querySelectorAll('.hero-tag,.hero-name,.hero-role,.hero-desc,.hero-btns,.hsc,.terminal-panel,.nav-logo,.nav-links li,.nav-resume').forEach(el=>{el.style.opacity='1';el.style.transform='none';});
+  } else {
+
+  animate('.hero-tag',
+    { opacity: [0, 1], y: [20, 0] },
+    { duration: 0.7, delay: 0.25, easing: spring({ stiffness: 80, damping: 18 }) }
+  );
+  animate('.hero-name',
+    { opacity: [0, 1], y: [32, 0] },
+    { duration: 0.9, delay: 0.45, easing: spring({ stiffness: 70, damping: 16 }) }
+  );
+  animate('.hero-role',
+    { opacity: [0, 1], y: [18, 0] },
+    { duration: 0.7, delay: 0.65, easing: spring({ stiffness: 80, damping: 18 }) }
+  );
+  animate('.hero-desc',
+    { opacity: [0, 1], y: [18, 0] },
+    { duration: 0.7, delay: 0.82, easing: spring({ stiffness: 80, damping: 18 }) }
+  );
+  animate('.hero-btns',
+    { opacity: [0, 1], y: [16, 0] },
+    { duration: 0.7, delay: 1.0, easing: spring({ stiffness: 80, damping: 18 }) }
+  );
+  animate('.hero-stat-cards .hsc',
+    { opacity: [0, 1], scale: [0.92, 1], y: [12, 0] },
+    { duration: 0.6, delay: stagger(0.1, { start: 1.05 }), easing: spring({ stiffness: 90, damping: 18 }) }
+  );
+  animate('.terminal-panel',
+    { opacity: [0, 1], x: [16, 0] },
+    { duration: 0.8, delay: 1.35, easing: spring({ stiffness: 75, damping: 18 }) }
+  );
+
+  /* ── MOTION ONE — Project card hover (spring lift) ── */
+  document.querySelectorAll('.proj-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      animate(card, { y: -6, boxShadow: '0 24px 48px rgba(0,0,0,0.45)' },
+        { duration: 0.35, easing: spring({ stiffness: 200, damping: 22 }) });
+    });
+    card.addEventListener('mouseleave', () => {
+      animate(card, { y: 0, boxShadow: '0 0px 0px rgba(0,0,0,0)' },
+        { duration: 0.4, easing: spring({ stiffness: 160, damping: 22 }) });
+    });
+  });
+
+  /* ── MOTION ONE — Fact cards hover ── */
+  document.querySelectorAll('.fact, .hsc').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      animate(card, { y: -4 }, { duration: 0.3, easing: spring({ stiffness: 220, damping: 24 }) });
+    });
+    card.addEventListener('mouseleave', () => {
+      animate(card, { y: 0 }, { duration: 0.35, easing: spring({ stiffness: 180, damping: 24 }) });
+    });
+  });
+
+  /* ── MOTION ONE — Contact buttons spring bounce ── */
+  document.querySelectorAll('.contact-btn').forEach(btn => {
+    btn.addEventListener('mouseenter', () => {
+      animate(btn, { y: -4, scale: 1.03 }, { duration: 0.3, easing: spring({ stiffness: 300, damping: 20 }) });
+    });
+    btn.addEventListener('mouseleave', () => {
+      animate(btn, { y: 0, scale: 1 }, { duration: 0.35, easing: spring({ stiffness: 250, damping: 22 }) });
+    });
+  });
+
+  /* ── MOTION ONE — Nav logo pulse on load ── */
+  animate('.nav-logo',
+    { opacity: [0, 1], x: [-12, 0] },
+    { duration: 0.6, delay: 0.1, easing: spring({ stiffness: 100, damping: 18 }) }
+  );
+  animate('.nav-links li',
+    { opacity: [0, 1], y: [-8, 0] },
+    { duration: 0.5, delay: stagger(0.07, { start: 0.2 }), easing: spring({ stiffness: 120, damping: 20 }) }
+  );
+  animate('.nav-resume',
+    { opacity: [0, 1] },
+    { duration: 0.5, delay: 0.65 }
+  );
+
+  /* ── MOTION ONE — Section dividers sweep in ── */
+  document.querySelectorAll('hr.div').forEach((hr, i) => {
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          animate(hr, { scaleX: [0, 1], opacity: [0, 1] },
+            { duration: 0.9, easing: 'cubic-bezier(0.16,1,0.3,1)', transformOrigin: 'left' });
+          obs.unobserve(hr);
+        }
+      }); //End Motion Check
+    }, { threshold: 0.5 });
+    obs.observe(hr);
+  });
+  /* ── CONTACT SECTION REVEAL — custom observer (AOS unreliable at page bottom) ── */
+  const contactEls = document.querySelectorAll('.reveal-contact');
+  const contactObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        contactObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0, rootMargin: '0px 0px 80px 0px' });
+  contactEls.forEach(el => contactObs.observe(el));
+
+  /* Also fire immediately if already in viewport on load */
+  window.addEventListener('load', () => {
+    contactEls.forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight) el.classList.add('in');
+    });
+  });
+} // end else (Motion One loaded)
+</script>
+</body>
+</html>
