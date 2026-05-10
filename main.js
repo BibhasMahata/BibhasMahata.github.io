@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════════════════
    BIBHAS MAHATA — Portfolio JS
    Cursor · Constellation · Radar · Bars · BarChart · Typewriter
-═══════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════  */
 
 document.addEventListener('DOMContentLoaded', () => {
 
