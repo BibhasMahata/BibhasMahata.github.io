@@ -57,7 +57,7 @@ body.hov #cur-ring{width:56px;height:56px;border-color:var(--acid)}
 .nav-resume{font-family:var(--fm);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;padding:.5rem 1.1rem;border:1px solid var(--wire3);color:var(--muted2);text-decoration:none;cursor:none;transition:all .2s}
 .nav-resume:hover{border-color:var(--acid);color:var(--acid)}
 
-/* ── HERO ── */
+/* ── HERO ──  */
 #hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;padding:5.5rem 3.5rem 4rem;position:relative;overflow:hidden}
 #constellation-canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.45}
 .hero-left{position:relative;z-index:2}
